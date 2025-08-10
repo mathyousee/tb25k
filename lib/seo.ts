@@ -22,7 +22,9 @@ export function generateMetadata(pageData: SEOPageData = {}): Metadata {
   return {
     title,
     description,
-    canonical: url,
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
       type: seoConfig.openGraph.type,
       locale: seoConfig.openGraph.locale,
@@ -55,19 +57,17 @@ export function generateMetadata(pageData: SEOPageData = {}): Metadata {
 }
 
 export function generateEventStructuredData() {
-  const siteConfig = require('../config/site.json');
-  
   return {
     '@context': 'https://schema.org',
     '@type': 'SportsEvent',
-    name: siteConfig.name,
-    startDate: `${siteConfig.date}T${siteConfig.time}-05:00`,
+    name: 'MN Taco Bell 25K',
+    startDate: '2025-06-14T08:00:00-05:00',
     location: {
       '@type': 'Place',
-      name: siteConfig.location.venue,
-      address: siteConfig.location.address,
+      name: 'TBD Venue',
+      address: 'TBD Address, Minneapolis, MN 55401',
     },
-    description: siteConfig.tagline,
+    description: 'A unique running race celebrating Taco Bell, fitness, and camaraderie.',
     eventStatus: 'https://schema.org/EventScheduled',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     url: process.env.NODE_ENV === 'production' ? 'https://mntacobell25k.com' : 'http://localhost:3000',

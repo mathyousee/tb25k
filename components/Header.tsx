@@ -2,12 +2,18 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { getSiteConfig } from '@/lib/content';
 import { CTAButton } from './CTAButton';
 
-const siteConfig = getSiteConfig();
+interface SiteConfig {
+  name: string;
+  registrationUrl: string;
+}
 
-export function Header() {
+interface HeaderProps {
+  siteConfig: SiteConfig;
+}
+
+export function Header({ siteConfig }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [

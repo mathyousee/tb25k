@@ -1,9 +1,21 @@
 import Link from 'next/link';
-import { getSiteConfig } from '@/lib/content';
 
-const siteConfig = getSiteConfig();
+interface SiteConfig {
+  name: string;
+  tagline: string;
+  social: {
+    facebook: string;
+    instagram: string;
+    twitter: string;
+    email: string;
+  };
+}
 
-export function Footer() {
+interface FooterProps {
+  siteConfig: SiteConfig;
+}
+
+export function Footer({ siteConfig }: FooterProps) {
   const footerNavigation = {
     race: [
       { name: 'Registration', href: '/registration' },
