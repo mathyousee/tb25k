@@ -11,6 +11,10 @@ async function init() {
     // Fallback: keep placeholders, but ensure year shows and countdown is inert
     console.warn("Failed to load site config:", err);
   }
+
+  // Load dynamic sections independent of site config
+  loadUpdates().catch((e) => console.warn("Updates load skipped:", e));
+  loadFAQ().catch((e) => console.warn("FAQ load skipped:", e));
 }
 
 function setYear() {
@@ -152,4 +156,66 @@ function setupCountdown(dateISO) {
 
 function pad(n) {
   return String(n).padStart(2, "0");
+}
+
+// ---- Dynamic sections ----
+async function loadUpdates() {
+  const list = document.querySelector("#updates-list, #updates ul");
+  if (!list) return;
+  const res = await fetch("./updates.json", { cache: "no-store" });
+  if (!res.ok) throw new Error(`updates.json fetch failed: ${res.status}`);
+  const items = await res.json();
+  if (!Array.isArray(items)) return;
+
+  list.innerHTML = "";
+  for (const it of items) {
+    const li = document.createElement("li");
+    li.className = "p-4 border rounded";
+
+    const d = document.createElement("div");
+    d.className = "text-sm text-zinc-500";
+    d.textContent = it.date || "";
+
+    const t = document.createElement("div");
+    t.className = "font-semibold";
+    t.textContent = it.title || "";
+
+    const b = document.createElement("div");
+    b.className = "text-sm text-zinc-700";
+    b.textContent = it.body || "";
+
+    li.append(d, t, b);
+    list.appendChild(li);
+  }
+}
+
+async function loadFAQ() {
+  const container = document.querySelector("#faq-list, #faq .grid");
+  if (!container) return;
+  const res = await fetch("./faq.json", { cache: "no-store" });
+  if (!res.ok) throw new Error(`faq.json fetch failed: ${res.status}`);
+  const items = await res.json();
+  if (!Array.isArray(items)) return;
+
+  container.innerHTML = "";
+  for (const it of items) {
+    const details = document.createElement("details");
+    details.className = "p-4 border rounded";
+
+    const summary = document.createElement("summary");
+    summary.className = "font-semibold cursor-pointer";
+    summary.textContent = it.question || "Question";
+
+    const p = document.createElement("p");
+    p.className = "mt-2 text-sm text-zinc-700";
+    // Basic support for simple HTML answers: default to textContent for safety, allow explicit html flag
+    if (it.html === true && typeof it.answer === "string") {
+      p.innerHTML = it.answer;
+    } else {
+      p.textContent = it.answer || "";
+    }
+
+    details.append(summary, p);
+    container.appendChild(details);
+  }
 }

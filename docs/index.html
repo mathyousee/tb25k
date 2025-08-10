@@ -274,10 +274,10 @@
     </section>
 
     <!-- FAQs -->
-    <section id="faqs" aria-labelledby="faqs-title" class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200">
+  <section id="faqs" aria-labelledby="faqs-title" class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 id="faqs-title" class="text-3xl font-bold tracking-tight">FAQs</h2>
-        <div class="mt-6 grid gap-4 md:grid-cols-2">
+    <div id="faqs-list" class="mt-6 grid gap-4 md:grid-cols-2">
           <details class="group rounded-xl border border-slate-200 bg-white p-5 open:shadow-sm">
             <summary class="cursor-pointer list-none font-semibold">Is this affiliated with Taco Bell?</summary>
             <p class="mt-2 text-slate-700">No. This is an independent, community-organized event that is not affiliated with or endorsed by Taco Bell® or Yum! Brands.</p>
@@ -381,6 +381,26 @@
         .catch(() => {/* keep fallback */});
     })();
     document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+  <!-- FAQs loader -->
+  <script>
+    (function(){
+      const grid = document.getElementById('faqs-list');
+      if (!grid) return;
+      fetch('./faq.json', {cache: 'no-cache'})
+        .then(r => r.ok ? r.json() : Promise.reject(r))
+        .then(items => {
+          if (!Array.isArray(items) || !items.length) return;
+          const esc = s => String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[m]));
+          grid.innerHTML = items.map(it => `
+            <details class="group rounded-xl border border-slate-200 bg-white p-5">
+              <summary class="cursor-pointer list-none font-semibold">${esc(it.question)}</summary>
+              <p class="mt-2 text-slate-700">${esc(it.answer)}</p>
+            </details>
+          `).join('');
+        })
+        .catch(() => {/* keep fallback */});
+    })();
   </script>
 </body>
 </html>
