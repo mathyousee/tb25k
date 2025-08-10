@@ -1,1 +1,15 @@
-{"event":{"name":"MN Taco Bell 25K","date":"2025-11-01T08:00:00-05:00","timezone":"America/Chicago","venue":{"name":"TBD Venue","address":"TBD Address, MN","cityState":"TBD, MN"}},"registration":{"url":"https://example.com/register"}}
+{
+  "event": {
+    "name": "MN Taco Bell 25K",
+    "date": "2025-11-01T08:00:00-05:00",
+    "timezone": "America/Chicago",
+    "venue": {
+      "name": "TBD Venue",
+      "address": "TBD Address, MN",
+      "cityState": "TBD, MN"
+    }
+  },
+  "registration": {
+    "url": "https://example.com/register"
+  }
+}
