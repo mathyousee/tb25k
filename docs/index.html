@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MN Taco Bell 25K – Official Site</title>
+  <meta name="description" content="A unique running race celebrating Taco Bell, fitness, and camaraderie. Join the MN Taco Bell 25K!" />
+  <link rel="canonical" href="https://example.github.io/tb25k/" />
+  <meta property="og:title" content="MN Taco Bell 25K – Official Site" />
+  <meta property="og:description" content="A unique running race celebrating Taco Bell, fitness, and camaraderie." />
+  <meta property="og:image" content="./og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MN Taco Bell 25K – Official Site" />
+  <meta name="twitter:description" content="A unique running race celebrating Taco Bell, fitness, and camaraderie." />
+  <meta name="twitter:image" content="./og-image.png" />
+  <link rel="icon" href="./favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { primary: '#7c3aed', secondary: '#f43f5e' },
+            accent: '#22c55e'
+          }
+        }
+      }
+    }
+  </script>
+  <script type="application/ld+json" id="event-jsonld">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": "MN Taco Bell 25K",
+    "startDate": "2025-XX-XXT08:00:00-05:00",
+    "location": {
+      "@type": "Place",
+      "name": "TBD Venue",
+      "address": "TBD Address, MN"
+    },
+    "description": "A unique running race celebrating Taco Bell, fitness, and camaraderie.",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "url": "https://example.com/"
+  }
+  </script>
+</head>
+<body class="min-h-screen bg-white text-zinc-900">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-black text-white px-3 py-1 rounded">Skip to content</a>
+
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#top" class="text-lg font-bold">MN Taco Bell 25K</a>
+      <nav aria-label="Primary">
+        <ul class="hidden md:flex gap-6 items-center">
+          <li><a class="hover:text-brand-primary" href="#schedule">Schedule</a></li>
+          <li><a class="hover:text-brand-primary" href="#location">Location</a></li>
+          <li><a class="hover:text-brand-primary" href="#faq">FAQ</a></li>
+          <li><a class="hover:text-brand-primary" href="#updates">Updates</a></li>
+          <li><a class="inline-flex items-center px-3 py-2 rounded bg-brand-primary text-white font-semibold" href="#registration">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="pb-16">
+    <!-- Hero -->
+    <section id="top" class="bg-gradient-to-br from-brand-primary/10 to-brand-secondary/10">
+      <div class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">MN Taco Bell 25K</h1>
+          <p class="mt-3 text-lg text-zinc-700">Celebrate Taco Bell, fitness, and camaraderie at Minnesota’s spiciest 25K.</p>
+          <p class="mt-2 text-zinc-800">
+            <strong>Date:</strong> <time id="event-date" datetime="">TBD</time> ·
+            <strong>Location:</strong> <span id="event-citystate">TBD, MN</span>
+          </p>
+          <div class="mt-6 flex gap-3">
+            <a class="inline-flex items-center px-5 py-3 rounded bg-brand-primary text-white font-semibold" href="#registration">Register Now</a>
+            <a class="inline-flex items-center px-5 py-3 rounded border border-zinc-300" href="#schedule">See Schedule</a>
+          </div>
+          <div class="mt-6 text-sm text-zinc-600">Accessibility: Strollers welcome; please leave pets at home. Details in FAQ.</div>
+        </div>
+        <div class="flex flex-col items-center justify-center bg-white rounded-lg border p-6">
+          <h2 class="text-xl font-semibold">Countdown to Race Day</h2>
+          <div id="countdown" class="mt-3 text-3xl font-mono tabular-nums" aria-live="polite">--d --h --m</div>
+          <div class="mt-2 text-sm text-zinc-600">Mark your calendars!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formats -->
+    <section id="formats" class="max-w-6xl mx-auto px-4 mt-12">
+      <h2 class="text-2xl font-bold">Race Formats — How spicy are you feeling?</h2>
+      <div class="mt-4 grid md:grid-cols-3 gap-4">
+        <article class="p-4 border rounded-lg">
+          <h3 class="font-semibold">Mild</h3>
+          <p class="text-sm text-zinc-700">Great for first-timers. Fun, steady, and tasty.</p>
+        </article>
+        <article class="p-4 border rounded-lg">
+          <h3 class="font-semibold">Hot</h3>
+          <p class="text-sm text-zinc-700">Step it up. Bring the heat and the hustle.</p>
+        </article>
+        <article class="p-4 border rounded-lg">
+          <h3 class="font-semibold">Diablo</h3>
+          <p class="text-sm text-zinc-700">For the bold. Maximum spice, maximum bragging rights.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Schedule -->
+    <section id="schedule" class="max-w-6xl mx-auto px-4 mt-12">
+      <h2 class="text-2xl font-bold">Race Day Schedule</h2>
+      <ul class="mt-4 space-y-2">
+        <li><time>6:30 AM</time> · Parking opens</li>
+        <li><time>7:00 AM</time> · Packet Pickup Opens</li>
+        <li><time>7:45 AM</time> · Corrals/Announcements</li>
+        <li><time>8:00 AM</time> · Race Start</li>
+        <li><time>10:30 AM</time> · Post-race festivities</li>
+      </ul>
+    </section>
+
+    <!-- Location -->
+    <section id="location" class="max-w-6xl mx-auto px-4 mt-12">
+      <h2 class="text-2xl font-bold">Location & Directions</h2>
+      <p class="mt-2">Venue: <span id="venue">TBD Venue</span>, <span id="event-citystate-2">TBD, MN</span></p>
+      <div class="mt-6 aspect-video border rounded overflow-hidden">
+        <iframe
+          title="Map"
+          loading="lazy"
+          width="100%"
+          height="100%"
+          src="https://www.google.com/maps?q=TBD%20Address%2C%20MN&output=embed"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="mt-4 space-x-3">
+        <a class="underline text-violet-700" id="google-directions" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&destination=TBD%20Address%2C%20MN">Google Maps</a>
+        <a class="underline text-violet-700" id="apple-directions" target="_blank" rel="noopener noreferrer" href="http://maps.apple.com/?daddr=TBD%20Address%2C%20MN">Apple Maps</a>
+      </div>
+    </section>
+
+    <!-- Registration -->
+    <section id="registration" class="max-w-6xl mx-auto px-4 mt-12">
+      <h2 class="text-2xl font-bold">Registration</h2>
+      <p class="mt-2 text-zinc-700">Register via our external platform.</p>
+      <div class="mt-4">
+        <a class="inline-flex px-5 py-3 rounded bg-brand-primary text-white font-semibold" data-registration-link href="#" target="_blank" rel="noopener noreferrer">Register Now</a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mt-8">
+        <section>
+          <h3 class="text-lg font-semibold">Pricing & Deadlines</h3>
+          <ul class="mt-2 list-disc pl-6 text-zinc-700">
+            <li>Early bird: TBD</li>
+            <li>Regular: TBD</li>
+            <li>Late: TBD</li>
+          </ul>
+        </section>
+        <section>
+          <h3 class="text-lg font-semibold">What’s Included</h3>
+          <ul class="mt-2 list-disc pl-6 text-zinc-700">
+            <li>Race entry, bib, and timing (TBD)</li>
+            <li>Post-race festivities</li>
+            <li>Swag (TBD)</li>
+          </ul>
+        </section>
+        <section>
+          <h3 class="text-lg font-semibold">Policies</h3>
+          <ul class="mt-2 list-disc pl-6 text-zinc-700">
+            <li>Refund/deferral policy: TBD</li>
+            <li>Waivers/age restrictions: TBD</li>
+            <li>Group/team options: TBD</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <!-- Updates -->
+    <section id="updates" class="max-w-6xl mx-auto px-4 mt-12">
+      <h2 class="text-2xl font-bold">Latest Updates</h2>
+      <ul class="mt-4 space-y-3">
+        <li class="p-4 border rounded">
+          <div class="text-sm text-zinc-500">2025-07-15</div>
+          <div class="font-semibold">Welcome to the MN Taco Bell 25K</div>
+          <div class="text-sm text-zinc-700">We’re excited to host this spicy run. Stay tuned for more details…</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-6xl mx-auto px-4 mt-12">
+      <h2 class="text-2xl font-bold">Frequently Asked Questions</h2>
+      <div class="mt-4 grid md:grid-cols-2 gap-4">
+        <details class="p-4 border rounded">
+          <summary class="font-semibold cursor-pointer">Are strollers allowed?</summary>
+          <p class="mt-2 text-sm text-zinc-700">Yes, please line up near the back for safety.</p>
+        </details>
+        <details class="p-4 border rounded">
+          <summary class="font-semibold cursor-pointer">Are pets allowed?</summary>
+          <p class="mt-2 text-sm text-zinc-700">For runner safety, pets are not allowed on the course.</p>
+        </details>
+        <details class="p-4 border rounded">
+          <summary class="font-semibold cursor-pointer">Is there a time limit?</summary>
+          <p class="mt-2 text-sm text-zinc-700">TBD.</p>
+        </details>
+        <details class="p-4 border rounded">
+          <summary class="font-semibold cursor-pointer">Are there aid stations?</summary>
+          <p class="mt-2 text-sm text-zinc-700">TBD.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="max-w-6xl mx-auto px-4 mt-12">
+      <h2 class="text-2xl font-bold">Contact</h2>
+      <p class="mt-2 text-zinc-700">Email us at <a class="underline text-violet-700" href="mailto:info@example.com">info@example.com</a></p>
+      <p class="mt-2 text-zinc-700">Or use our form (optional Formspree setup).</p>
+    </section>
+  </main>
+
+  <footer class="mt-16 border-t">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-zinc-600 flex flex-col md:flex-row md:items-center justify-between gap-3">
+      <div>© <span id="year"></span> MN Taco Bell 25K</div>
+      <div class="flex gap-4">
+        <a class="hover:text-brand-primary" href="#contact">Contact</a>
+        <a class="hover:text-brand-primary" href="#registration">Register</a>
+      </div>
+    </div>
+  </footer>
+
+  <noscript>
+    <div class="max-w-6xl mx-auto px-4 py-4 bg-yellow-100 border-t">
+      JavaScript is disabled. Countdown and some interactions may be unavailable.
+    </div>
+  </noscript>
+
+  <script src="./assets/js/main.js" defer></script>
+</body>
+</html>
