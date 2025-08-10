@@ -1,0 +1,39 @@
+{
+  "venue": {
+    "name": "TBD Venue Name",
+    "address": "TBD Address, Minneapolis, MN 55401"
+  },
+  "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.8!2d-93.2650!3d44.9778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDU4JzQwLjAiTiA5M8KwMTUnNTQuMCJX!5e0!3m2!1sen!2sus!4v1234567890123",
+  "parking": {
+    "info": "Free parking available in adjacent lots. Carpooling encouraged as spaces may be limited on race day.",
+    "alternativeOptions": [
+      "Street parking available on surrounding blocks (check signage)",
+      "Paid parking garage 2 blocks north on Main Street",
+      "Park & Ride shuttle service from Metro Transit (details TBD)"
+    ]
+  },
+  "transit": {
+    "metro": "Green Line to TBD Station, 3-block walk to venue",
+    "bus": "Routes 4, 6, and 21 serve the area",
+    "bike": "Bike racks available at venue. Nice Ride stations nearby."
+  },
+  "accessibility": {
+    "facilities": "Accessible restrooms, wheelchair accessible starting area",
+    "accommodations": "Contact us for specific accessibility needs",
+    "serviceAnimals": "Service animals welcome. Please notify us in advance."
+  },
+  "amenities": [
+    "Restroom facilities",
+    "Water stations",
+    "First aid station",
+    "Bag drop area (supervised)",
+    "Post-race food and beverage area",
+    "Spectator viewing areas"
+  ],
+  "directions": {
+    "fromNorth": "Take I-35W South to Exit 19, follow signs to venue",
+    "fromSouth": "Take I-35W North to Exit 19, follow signs to venue",
+    "fromEast": "Take I-94 West to I-35W North, Exit 19",
+    "fromWest": "Take I-394 East to I-35W South, Exit 19"
+  }
+}

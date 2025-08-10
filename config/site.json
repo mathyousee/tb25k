@@ -1,0 +1,19 @@
+{
+  "name": "MN Taco Bell 25K",
+  "tagline": "A unique running race celebrating Taco Bell, fitness, and camaraderie.",
+  "date": "2025-06-14",
+  "time": "08:00:00",
+  "timezone": "America/Chicago",
+  "location": {
+    "venue": "TBD Venue",
+    "address": "TBD Address, Minneapolis, MN 55401",
+    "cityState": "Minneapolis, MN"
+  },
+  "registrationUrl": "https://example.com/register",
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "twitter": "",
+    "email": "contact@mntacobell25k.com"
+  }
+}

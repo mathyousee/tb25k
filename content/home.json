@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "title": "MN Taco Bell 25K",
+    "subtitle": "A unique running race celebrating Taco Bell, fitness, and camaraderie",
+    "description": "Join runners from across Minnesota for an unforgettable 25-kilometer experience that combines the thrill of racing with the joy of tacos. Whether you're a seasoned athlete or just here for the fun, this event brings together community, fitness, and flavor in one epic day.",
+    "ctaText": "Register Now"
+  },
+  "spiceFormats": [
+    {
+      "id": "mild",
+      "name": "Mild",
+      "distance": "5K Fun Run",
+      "description": "Perfect for beginners or those who want to enjoy a leisurely pace. Includes Taco Bell breakfast before the run!",
+      "whoItsFor": "First-time runners, families, and taco enthusiasts",
+      "nutrition": "Light and energizing - perfect morning fuel",
+      "color": "green"
+    },
+    {
+      "id": "hot",
+      "name": "Hot",
+      "distance": "15K Challenge",
+      "description": "A moderate challenge for experienced runners. Post-race feast with signature Taco Bell menu items!",
+      "whoItsFor": "Regular runners looking for a fun challenge",
+      "nutrition": "Balanced energy with spicy kick",
+      "color": "orange"
+    },
+    {
+      "id": "diablo",
+      "name": "Diablo",
+      "distance": "25K Ultra",
+      "description": "The ultimate test - our full 25K course through scenic Minnesota. Includes premium Taco Bell experience and swag!",
+      "whoItsFor": "Serious runners and ultra-enthusiasts",
+      "nutrition": "Maximum fuel for maximum performance",
+      "color": "red"
+    }
+  ],
+  "sections": {
+    "schedule": {
+      "title": "Race Day Schedule",
+      "description": "Everything you need to know for race day"
+    },
+    "location": {
+      "title": "Location & Parking",
+      "description": "Find us at the heart of Minneapolis"
+    },
+    "updates": {
+      "title": "Latest Updates",
+      "description": "Stay informed with the latest race news"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Got questions? We've got answers!"
+    }
+  },
+  "sponsors": []
+}
