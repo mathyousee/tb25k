@@ -1,240 +1,386 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MN Taco Bell 25K – Official Site</title>
-  <meta name="description" content="A unique running race celebrating Taco Bell, fitness, and camaraderie. Join the MN Taco Bell 25K!" />
-  <link rel="canonical" href="https://mathyousee.github.io/tb25k/" />
-  <meta property="og:title" content="MN Taco Bell 25K – Official Site" />
-  <meta property="og:description" content="A unique running race celebrating Taco Bell, fitness, and camaraderie." />
-  <meta property="og:image" content="./assets/images/og-image.svg" />
+  <title>MN Taco Bell 25K — Official Site</title>
+  <meta name="description" content="The MN Taco Bell 25K is a casual, community-first running event in Minnesota. Three spice-level formats (Mild, Hot, Diablo), taco-stop fun, clear logistics, and easy registration." />
+  <meta name="theme-color" content="#3b2693" />
+  <link rel="canonical" href="https://example.github.io/mn-tb-25k/" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="MN Taco Bell 25K — Run, Laugh, Eat (Responsibly)" />
+  <meta property="og:description" content="Choose your heat level — Mild, Hot, or Diablo — and tackle a 25K with taco-stop fun along the way." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.github.io/mn-tb-25k/" />
+  <meta property="og:image" content="https://example.github.io/mn-tb-25k/og-image.jpg" />
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MN Taco Bell 25K – Official Site" />
-  <meta name="twitter:description" content="A unique running race celebrating Taco Bell, fitness, and camaraderie." />
-  <meta name="twitter:image" content="./assets/images/og-image.svg" />
-  <link rel="icon" href="./assets/images/favicon.svg" />
+  <meta name="twitter:title" content="MN Taco Bell 25K — Official Site" />
+  <meta name="twitter:description" content="Three spice-level formats (Mild, Hot, Diablo), taco-stop fun, clear logistics, and easy registration." />
+  <meta name="twitter:image" content="https://example.github.io/mn-tb-25k/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png" />
+
+  <!-- Tailwind (Play CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brand: { primary: '#7c3aed', secondary: '#f43f5e' },
-            accent: '#22c55e'
+            brand: {50:'#f6f5fb',100:'#ece9ff',200:'#d9d2ff',300:'#b7a9ff',400:'#8a6bff',500:'#6b46ff',600:'#5b3be0',700:'#4a2fb8',800:'#3b2693',900:'#2f1f75'},
+            sand:  {50:'#f8f4ec',100:'#f3e9d7',200:'#e8d4b0',300:'#d9b887',400:'#c79a5f',500:'#b8843f',600:'#9c6f36',700:'#7e592b',800:'#664a23',900:'#513b1c'}
           }
         }
       }
     }
   </script>
-  <script type="application/ld+json" id="event-jsonld">
+  <style>
+    @media (prefers-reduced-motion: reduce) { .animate-hero { animation: none !important; } }
+  </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SportsEvent",
     "name": "MN Taco Bell 25K",
-    "startDate": "2025-XX-XXT08:00:00-05:00",
+    "description": "A playful community 25K with three spice-level formats — Mild, Hot, and Diablo — featuring stops at taco-style aid locations.",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "startDate": "2025-10-11T08:00:00-05:00",
+    "endDate": "2025-10-11T13:00:00-05:00",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "location": {
       "@type": "Place",
-      "name": "TBD Venue",
-      "address": "TBD Address, MN"
+      "name": "Start/Finish — Lakeside Park",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Lakeview Dr",
+        "addressLocality": "Minneapolis",
+        "addressRegion": "MN",
+        "postalCode": "55401",
+        "addressCountry": "US"
+      }
     },
-    "description": "A unique running race celebrating Taco Bell, fitness, and camaraderie.",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "url": "https://mathyousee.github.io/tb25k/"
+    "organizer": {"@type": "Organization","name": "MN Taco Bell 25K Organizing Team","url": "https://example.github.io/mn-tb-25k/"},
+    "offers": {"@type": "Offer","url": "#","price": "55","priceCurrency": "USD","availability": "https://schema.org/InStock","validFrom": "2025-08-15T00:00:00-05:00"}
   }
   </script>
 </head>
-<body class="min-h-screen bg-white text-zinc-900">
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-black text-white px-3 py-1 rounded">Skip to content</a>
+<body class="antialiased text-slate-900 bg-white">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:text-slate-900 focus:p-2 focus:rounded-md">Skip to content</a>
 
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#top" class="text-lg font-bold">MN Taco Bell 25K</a>
-      <nav aria-label="Primary">
-        <ul class="hidden md:flex gap-6 items-center">
-          <li><a class="hover:text-brand-primary" href="#schedule">Schedule</a></li>
-          <li><a class="hover:text-brand-primary" href="#location">Location</a></li>
-          <li><a class="hover:text-brand-primary" href="#faq">FAQ</a></li>
-          <li><a class="hover:text-brand-primary" href="#updates">Updates</a></li>
-          <li><a class="inline-flex items-center px-3 py-2 rounded bg-brand-primary text-white font-semibold" href="#registration">Register</a></li>
-        </ul>
-      </nav>
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-3" aria-label="MN Taco Bell 25K home">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-sand-300 text-slate-900 font-extrabold">🏃</span>
+          <span class="font-bold tracking-tight">MN Taco Bell 25K</span>
+        </a>
+        <nav aria-label="Primary" class="hidden md:block">
+          <ul class="flex items-center gap-6 text-sm font-medium">
+            <li><a class="hover:text-brand-600" href="#about">About</a></li>
+            <li><a class="hover:text-brand-600" href="#formats">Formats</a></li>
+            <li><a class="hover:text-brand-600" href="#schedule">Schedule</a></li>
+            <li><a class="hover:text-brand-600" href="#faqs">FAQs</a></li>
+            <li><a class="hover:text-brand-600" href="#updates">Updates</a></li>
+          </ul>
+        </nav>
+        <div class="hidden md:flex">
+          <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-white font-semibold shadow-sm ring-1 ring-brand-700/20 hover:bg-brand-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-400" aria-label="Register for the MN Taco Bell 25K">Register Soon</a>
+        </div>
+        <details class="md:hidden">
+          <summary class="list-none inline-flex items-center gap-2 rounded-xl px-3 py-2 ring-1 ring-slate-300 hover:bg-slate-50 cursor-pointer" aria-label="Open menu">
+            <span>☰</span><span class="sr-only">Menu</span>
+          </summary>
+          <div class="mt-2 rounded-xl border border-slate-200 bg-white p-2 shadow-lg">
+            <a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="#about">About</a>
+            <a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="#formats">Formats</a>
+            <a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="#schedule">Schedule</a>
+            <a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="#faqs">FAQs</a>
+            <a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="#updates">Updates</a>
+            <a class="mt-2 block rounded-lg bg-brand-600 px-3 py-2 text-white font-semibold hover:bg-brand-700" href="#">Register Soon</a>
+          </div>
+        </details>
+      </div>
     </div>
   </header>
 
-  <main id="main" class="pb-16">
-    <!-- Hero -->
-    <section id="top" class="bg-gradient-to-br from-brand-primary/10 to-brand-secondary/10">
-      <div class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
+  <!-- Hero -->
+  <section aria-labelledby="hero-title" class="relative isolate overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-sand-50 via-white to-white"></div>
+    <svg class="absolute -right-24 -top-16 h-72 w-72 text-sand-100" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+      <path d="M146 26c-17 21-19 41-9 61 15 28 5 57-39 67-19 4-30 16-34 34-2 9-12 9-17 0-7-14-9-29-2-44 12-27 36-33 60-42 19-7 24-20 17-37-5-13-3-25 5-39 3-5 11-6 19 0z" />
+    </svg>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <div class="grid gap-10 md:grid-cols-2 md:items-center">
         <div>
-          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">MN Taco Bell 25K</h1>
-          <p class="mt-3 text-lg text-zinc-700">Celebrate Taco Bell, fitness, and camaraderie at Minnesota’s spiciest 25K.</p>
-          <p class="mt-2 text-zinc-800">
-            <strong>Date:</strong> <time id="event-date" datetime="">TBD</time> ·
-            <strong>Location:</strong> <span id="event-citystate">TBD, MN</span>
-          </p>
-          <div class="mt-6 flex gap-3">
-            <a class="inline-flex items-center px-5 py-3 rounded bg-brand-primary text-white font-semibold" href="#registration">Register Now</a>
-            <a class="inline-flex items-center px-5 py-3 rounded border border-zinc-300" href="#schedule">See Schedule</a>
+          <h1 id="hero-title" class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">Run. Laugh. (Responsibly) Eat. <span class="text-brand-600">MN Taco Bell 25K</span></h1>
+          <p class="mt-4 text-lg text-slate-700">A casual 25K in Minnesota with three spice-level formats, taco-style aid stops, and big community vibes. Choose your heat — <strong>Mild</strong>, <strong>Hot</strong>, or <strong>Diablo</strong> — and join the fun.</p>
+          <div class="mt-6 flex flex-wrap items-center gap-3">
+            <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-white font-semibold shadow-sm ring-1 ring-brand-700/20 hover:bg-brand-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-400" aria-label="Register now">Register Soon</a>
+            <a href="#formats" class="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold ring-1 ring-slate-300 hover:bg-slate-50" aria-label="Explore race formats">Explore Formats</a>
           </div>
-          <div class="mt-6 text-sm text-zinc-600">Accessibility: Strollers welcome; please leave pets at home. Details in FAQ.</div>
+          <p class="mt-3 text-sm text-slate-500">Note: This community event is not affiliated with or endorsed by Taco Bell® or Yum! Brands.</p>
         </div>
-        <div class="flex flex-col items-center justify-center bg-white rounded-lg border p-6">
-          <h2 class="text-xl font-semibold">Countdown to Race Day</h2>
-          <div id="countdown" class="mt-3 text-3xl font-mono tabular-nums" aria-live="polite">--d --h --m</div>
-          <div class="mt-2 text-sm text-zinc-600">Mark your calendars!</div>
+        <div class="relative">
+          <img src="/assets/images/tb25-hero.png" alt="Runner passing a restaurant that looks like a fast food taco joint; festive community atmosphere" class="w-full rounded-2xl border border-slate-200 shadow-lg" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main" class="contents">
+    <!-- About -->
+    <section id="about" aria-labelledby="about-title" class="py-16 sm:py-24 border-t border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-10 md:grid-cols-2 md:items-center">
+          <div>
+            <h2 id="about-title" class="text-3xl font-bold tracking-tight">What is it — and why is it awesome?</h2>
+            <p class="mt-4 text-slate-700">The MN Taco Bell 25K is an out-and-back-ish 25-kilometer run with taco-style aid stops sprinkled along the route. It’s built for smiles first, PRs second: friendly volunteers, goofy awards, and a soundtrack that tastes like Saturday. Run it hard or jog it with friends — you do you.</p>
+            <ul class="mt-6 space-y-2 text-slate-700">
+              <li class="flex items-start gap-2"><span aria-hidden="true">🌶️</span><span>Three formats — pick your spice level.</span></li>
+              <li class="flex items-start gap-2"><span aria-hidden="true">🗺️</span><span>Clear logistics: schedule, parking, and map on race week.</span></li>
+              <li class="flex items-start gap-2"><span aria-hidden="true">📣</span><span>Race updates posted right here.</span></li>
+            </ul>
+          </div>
+          <div class="relative">
+            <div class="rounded-2xl border border-slate-200 p-6 shadow-sm bg-white">
+              <dl class="grid grid-cols-2 gap-4 text-sm">
+                <div><dt class="font-medium text-slate-600">Date</dt><dd class="mt-1 font-semibold">Sat · Nov 15, 2025</dd></div>
+                <div><dt class="font-medium text-slate-600">Start Time</dt><dd class="mt-1 font-semibold">11:00 AM</dd></div>
+                <div><dt class="font-medium text-slate-600">Distance</dt><dd class="mt-1 font-semibold">25 kilometers</dd></div>
+                <div><dt class="font-medium text-slate-600">Location</dt><dd class="mt-1 font-semibold">St. Louis Park, MN</dd></div>
+                <div><dt class="font-medium text-slate-600">Price</dt><dd class="mt-1 font-semibold">TBD Donation</dd></div>
+                <div><dt class="font-medium text-slate-600">Field Cap</dt><dd class="mt-1 font-semibold">100 runners</dd></div>
+              </dl>
+              <a href="#" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-sand-400 px-5 py-3 text-slate-900 font-semibold ring-1 ring-sand-600/30 hover:bg-sand-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-sand-300" aria-label="Register for the race">Secure Your Spot Soon</a>
+              <p class="mt-2 text-center text-xs text-slate-500">Prices and details are placeholders — update before launch.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Formats -->
-    <section id="formats" class="max-w-6xl mx-auto px-4 mt-12">
-      <h2 class="text-2xl font-bold">Race Formats — How spicy are you feeling?</h2>
-      <div class="mt-4 grid md:grid-cols-3 gap-4">
-        <article class="p-4 border rounded-lg">
-          <h3 class="font-semibold">Mild</h3>
-          <p class="text-sm text-zinc-700">Great for first-timers. Fun, steady, and tasty.</p>
-        </article>
-        <article class="p-4 border rounded-lg">
-          <h3 class="font-semibold">Hot</h3>
-          <p class="text-sm text-zinc-700">Step it up. Bring the heat and the hustle.</p>
-        </article>
-        <article class="p-4 border rounded-lg">
-          <h3 class="font-semibold">Diablo</h3>
-          <p class="text-sm text-zinc-700">For the bold. Maximum spice, maximum bragging rights.</p>
-        </article>
+    <section id="formats" aria-labelledby="formats-title" class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-end sm:justify-between">
+          <div>
+            <h2 id="formats-title" class="text-3xl font-bold tracking-tight">How spicy are you feeling?</h2>
+            <p class="mt-2 text-slate-700">Choose your format. Each option covers ~25K but varies in taco-stop rules. All formats finish at the same party.</p>
+          </div>
+          <a href="#" class="mt-4 sm:mt-0 inline-flex items-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-white font-semibold shadow-sm ring-1 ring-brand-700/20 hover:bg-brand-700">Register Soon</a>
+        </div>
+
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" aria-labelledby="mild-title">
+            <div class="flex items-center justify-between">
+              <h3 id="mild-title" class="text-xl font-bold">Mild</h3>
+              <span class="inline-flex items-center gap-1 text-sm" aria-label="Spice level 1 of 3"><span>🌶️</span><span class="text-slate-500">x1</span></span>
+            </div>
+            <p class="mt-3 text-slate-700">Run 25K with optional taco-stop fun. Eat, sip, or just high-five — you choose. Time is your own.</p>
+            <ul class="mt-4 list-disc ps-5 text-slate-700 text-sm space-y-1">
+              <li>Recommended for those just looking to run.</li>
+              <li>Follow the full course, but no need to dine on Taco Bell.</li>
+              <li>Cheer on others while you run!</li>
+            </ul>
+          </article>
+
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" aria-labelledby="hot-title">
+            <div class="flex items-center justify-between">
+              <h3 id="hot-title" class="text-xl font-bold">Hot</h3>
+              <span class="inline-flex items-center gap-1 text-sm" aria-label="Spice level 2 of 3"><span>🌶️🌶️</span><span class="text-slate-500">x2</span></span>
+            </div>
+            <p class="mt-3 text-slate-700">Hit designated Taco Bell stops; eat any menu item from each.</p>
+            <ul class="mt-4 list-disc ps-5 text-slate-700 text-sm space-y-1">
+              <li>Great balance of speed and spice.</li>
+              <li>Same course as Mild, just with Taco Bell.</li>
+              <li>No required menu items.</li>
+            </ul>
+          </article>
+
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" aria-labelledby="diablo-title">
+            <div class="flex items-center justify-between">
+              <h3 id="diablo-title" class="text-xl font-bold">Diablo</h3>
+              <span class="inline-flex items-center gap-1 text-sm" aria-label="Spice level 3 of 3"><span>🌶️🌶️🌶️</span><span class="text-slate-500">x3</span></span>
+            </div>
+            <p class="mt-3 text-slate-700">Complete every Taco Bell stop and eat the required items.</p>
+            <ul class="mt-4 list-disc ps-5 text-slate-700 text-sm space-y-1">
+              <li>Same course as Hot, with a more prescribed menu.</li>
+              <li>Eat required menu items (details to come).</li>
+              <li>Keep receipts and wrappers to prove your spiciness.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700">
+          <h3 class="font-semibold">Safety & Inclusivity</h3>
+          <p class="mt-2">Taco stops are completely optional, and spice levels are designed to be fun, safe, and accessible. You do not need to declare your spiciness before the race and are welcome to change as desired. Dietary accommodations available — ask a volunteer. Please run within your limits.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Schedule -->
-    <section id="schedule" class="max-w-6xl mx-auto px-4 mt-12">
-      <h2 class="text-2xl font-bold">Race Day Schedule</h2>
-      <ul class="mt-4 space-y-2">
-        <li><time>6:30 AM</time> · Parking opens</li>
-        <li><time>7:00 AM</time> · Packet Pickup Opens</li>
-        <li><time>7:45 AM</time> · Corrals/Announcements</li>
-        <li><time>8:00 AM</time> · Race Start</li>
-        <li><time>10:30 AM</time> · Post-race festivities</li>
-      </ul>
-    </section>
+    <!-- Schedule & Location -->
+    <section id="schedule" aria-labelledby="schedule-title" class="py-16 sm:py-24 border-t border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-2">
+          <div>
+            <h2 id="schedule-title" class="text-3xl font-bold tracking-tight">Race-day schedule</h2>
+            <p class="mt-2 text-slate-700">Subject to minor tweaks. Final schedule posted race week.</p>
+            <div class="mt-6 overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+              <table class="min-w-full text-left text-sm">
+                <thead class="bg-slate-50 text-slate-600">
+                  <tr>
+                    <th class="px-4 py-3 font-medium">Time</th>
+                    <th class="px-4 py-3 font-medium">What</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr><td class="px-4 py-3 whitespace-nowrap">10 minutes before race</td><td class="px-4 py-3">Briefing & spicy stretch</td></tr>
+                  <tr><td class="px-4 py-3 whitespace-nowrap">TBD</td><td class="px-4 py-3">Race start (all formats)</td></tr>
+                  <tr><td class="px-4 py-3 whitespace-nowrap">TBD</td><td class="px-4 py-3">First finishers</td></tr>
+                  <tr><td class="px-4 py-3 whitespace-nowrap">TBD</td><td class="px-4 py-3">Course closes & awards</td></tr>
+                </tbody>
+              </table>
+            </div>
 
-    <!-- Location -->
-    <section id="location" class="max-w-6xl mx-auto px-4 mt-12">
-      <h2 class="text-2xl font-bold">Location & Directions</h2>
-      <p class="mt-2">Venue: <span id="venue">TBD Venue</span>, <span id="event-citystate-2">TBD, MN</span></p>
-      <div class="mt-6 aspect-video border rounded overflow-hidden">
-        <iframe
-          title="Map"
-          loading="lazy"
-          width="100%"
-          height="100%"
-          src="https://www.google.com/maps?q=TBD%20Address%2C%20MN&output=embed"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-      <div class="mt-4 space-x-3">
-        <a class="underline text-violet-700" id="google-directions" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&destination=TBD%20Address%2C%20MN">Google Maps</a>
-        <a class="underline text-violet-700" id="apple-directions" target="_blank" rel="noopener noreferrer" href="http://maps.apple.com/?daddr=TBD%20Address%2C%20MN">Apple Maps</a>
-      </div>
-    </section>
+            <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-700">
+              <h3 class="font-semibold">Parking & transit</h3>
+              <p class="mt-2">Parking and transportation details to follow.</p>
+            </div>
+          </div>
 
-    <!-- Registration -->
-    <section id="registration" class="max-w-6xl mx-auto px-4 mt-12">
-      <h2 class="text-2xl font-bold">Registration</h2>
-      <p class="mt-2 text-zinc-700">Register via our external platform.</p>
-      <div class="mt-4">
-        <a class="inline-flex px-5 py-3 rounded bg-brand-primary text-white font-semibold" data-registration-link href="#" target="_blank" rel="noopener noreferrer">Register Now</a>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8 mt-8">
-        <section>
-          <h3 class="text-lg font-semibold">Pricing & Deadlines</h3>
-          <ul class="mt-2 list-disc pl-6 text-zinc-700">
-            <li>Early bird: TBD</li>
-            <li>Regular: TBD</li>
-            <li>Late: TBD</li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="text-lg font-semibold">What’s Included</h3>
-          <ul class="mt-2 list-disc pl-6 text-zinc-700">
-            <li>Race entry, bib, and timing (TBD)</li>
-            <li>Post-race festivities</li>
-            <li>Swag (TBD)</li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="text-lg font-semibold">Policies</h3>
-          <ul class="mt-2 list-disc pl-6 text-zinc-700">
-            <li>Refund/deferral policy: TBD</li>
-            <li>Waivers/age restrictions: TBD</li>
-            <li>Group/team options: TBD</li>
-          </ul>
-        </section>
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight">Start/finish & map</h2>
+            <address class="not-italic mt-2 text-slate-700">
+              St. Louis Park, MN
+            </address>
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a href="https://maps.google.com/?q=" class="inline-flex items-center gap-2 rounded-xl px-4 py-2 ring-1 ring-slate-300 hover:bg-slate-50" aria-label="Open Google Maps directions">Open in Maps</a>
+              <a href="#faqs" class="inline-flex items-center gap-2 rounded-xl px-4 py-2 ring-1 ring-slate-300 hover:bg-slate-50">What should I bring?</a>
+            </div>
+            <div class="mt-6">
+              <img src="/assets/map.jpg" alt="Simple map showing start/finish area and nearby parking lots" class="w-full rounded-2xl border border-slate-200 shadow-sm" loading="lazy" />
+              <p class="mt-2 text-xs text-slate-500">Map is illustrative. Final route and parking map posted race week.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Updates -->
-    <section id="updates" class="max-w-6xl mx-auto px-4 mt-12">
-      <h2 class="text-2xl font-bold">Latest Updates</h2>
-      <ul class="mt-4 space-y-3">
-        <li class="p-4 border rounded">
-          <div class="text-sm text-zinc-500">2025-07-15</div>
-          <div class="font-semibold">Welcome to the MN Taco Bell 25K</div>
-          <div class="text-sm text-zinc-700">We’re excited to host this spicy run. Stay tuned for more details…</div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="max-w-6xl mx-auto px-4 mt-12">
-      <h2 class="text-2xl font-bold">Frequently Asked Questions</h2>
-      <div class="mt-4 grid md:grid-cols-2 gap-4">
-        <details class="p-4 border rounded">
-          <summary class="font-semibold cursor-pointer">Are strollers allowed?</summary>
-          <p class="mt-2 text-sm text-zinc-700">Yes, please line up near the back for safety.</p>
-        </details>
-        <details class="p-4 border rounded">
-          <summary class="font-semibold cursor-pointer">Are pets allowed?</summary>
-          <p class="mt-2 text-sm text-zinc-700">For runner safety, pets are not allowed on the course.</p>
-        </details>
-        <details class="p-4 border rounded">
-          <summary class="font-semibold cursor-pointer">Is there a time limit?</summary>
-          <p class="mt-2 text-sm text-zinc-700">TBD.</p>
-        </details>
-        <details class="p-4 border rounded">
-          <summary class="font-semibold cursor-pointer">Are there aid stations?</summary>
-          <p class="mt-2 text-sm text-zinc-700">TBD.</p>
-        </details>
+    <!-- FAQs -->
+    <section id="faqs" aria-labelledby="faqs-title" class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 id="faqs-title" class="text-3xl font-bold tracking-tight">FAQs</h2>
+        <div class="mt-6 grid gap-4 md:grid-cols-2">
+          <details class="group rounded-xl border border-slate-200 bg-white p-5 open:shadow-sm">
+            <summary class="cursor-pointer list-none font-semibold">Is this affiliated with Taco Bell?</summary>
+            <p class="mt-2 text-slate-700">No. This is an independent, community-organized event that is not affiliated with or endorsed by Taco Bell® or Yum! Brands.</p>
+          </details>
+          <details class="group rounded-xl border border-slate-200 bg-white p-5">
+            <summary class="cursor-pointer list-none font-semibold">What’s included with registration?</summary>
+            <p class="mt-2 text-slate-700">Bib, timing (all formats), well-stocked aid, course markings, volunteer support, finish-line snacks, and post-run good vibes. Diablo gets a small extra token.</p>
+          </details>
+          <details class="group rounded-xl border border-slate-200 bg-white p-5">
+            <summary class="cursor-pointer list-none font-semibold">Refunds/deferrals?</summary>
+            <p class="mt-2 text-slate-700">We offer bib transfers through <strong>Sept 26, 2025</strong>. No refunds; limited deferrals considered for injury with a note from a medical provider.</p>
+          </details>
+          <details class="group rounded-xl border border-slate-200 bg-white p-5">
+            <summary class="cursor-pointer list-none font-semibold">Cutoffs?</summary>
+            <p class="mt-2 text-slate-700">Course closes at 12:30 PM (4.5 hours). That’s ~17:30/mi average. We’ll have a friendly sweep team.</p>
+          </details>
+          <details class="group rounded-xl border border-slate-200 bg-white p-5">
+            <summary class="cursor-pointer list-none font-semibold">Can I bring family or a stroller?</summary>
+            <p class="mt-2 text-slate-700">Spectators are very welcome at start/finish. For safety, no strollers on course. Leashed dogs okay at park; not on course.</p>
+          </details>
+          <details class="group rounded-xl border border-slate-200 bg-white p-5">
+            <summary class="cursor-pointer list-none font-semibold">What should I bring?</summary>
+            <p class="mt-2 text-slate-700">Hydration (500–1000 ml), hat/sunscreen, ID, and a sense of humor. We’ll share a detailed gear list race week based on forecast.</p>
+          </details>
+        </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="max-w-6xl mx-auto px-4 mt-12">
-      <h2 class="text-2xl font-bold">Contact</h2>
-      <p class="mt-2 text-zinc-700">Email us at <a class="underline text-violet-700" href="mailto:info@example.com">info@example.com</a></p>
-      <p class="mt-2 text-zinc-700">Or use our form (optional Formspree setup).</p>
+    <!-- Updates / Announcements -->
+    <section id="updates" aria-labelledby="updates-title" class="py-16 sm:py-24 border-t border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-end sm:justify-between">
+          <div>
+            <h2 id="updates-title" class="text-3xl font-bold tracking-tight">Updates & announcements</h2>
+            <p class="mt-2 text-slate-700">Official news lives here. We’ll also email registered runners.</p>
+          </div>
+          <a href="#" class="mt-4 sm:mt-0 inline-flex items-center gap-2 rounded-xl bg-sand-400 px-4 py-2 text-slate-900 font-semibold ring-1 ring-sand-600/30 hover:bg-sand-300">Register Soon</a>
+        </div>
+
+        <ol id="updates-list" class="mt-6 space-y-4" aria-live="polite">
+          <!-- Fallback content; replaced when /updates.json loads -->
+          <li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div class="text-xs uppercase tracking-wide text-slate-500">Aug 10, 2025</div>
+            <h3 class="mt-1 font-semibold">Site launched 🎉</h3>
+            <p class="mt-1 text-slate-700">Welcome! Registration opens Aug 15. Course preview and final map will drop in September.</p>
+          </li>
+        </ol>
+      </div>
     </section>
   </main>
 
-  <footer class="mt-16 border-t">
-    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-zinc-600 flex flex-col md:flex-row md:items-center justify-between gap-3">
-      <div>© <span id="year"></span> MN Taco Bell 25K</div>
-      <div class="flex gap-4">
-        <a class="hover:text-brand-primary" href="#contact">Contact</a>
-        <a class="hover:text-brand-primary" href="#registration">Register</a>
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-slate-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid gap-8 md:grid-cols-3">
+        <div>
+          <h3 class="font-semibold">MN Taco Bell 25K</h3>
+          <p class="mt-2 text-sm text-slate-600">Community-organized and volunteer-powered. Thanks for keeping it fun and kind.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">Contact</h3>
+          <ul class="mt-2 space-y-1 text-sm text-slate-700">
+            <li>Email: <a class="underline" href="mailto:hello@example.com">hello@example.com</a></li>
+            <li>Media: <a class="underline" href="mailto:press@example.com">press@example.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold">Policies</h3>
+          <ul class="mt-2 space-y-1 text-sm text-slate-700">
+            <li><a href="#faqs" class="underline">Refund/deferral policy</a></li>
+            <li><a href="#faqs" class="underline">Inclusivity & safety</a></li>
+            <li class="text-slate-500">Not affiliated with Taco Bell®.</li>
+          </ul>
+        </div>
       </div>
+      <div class="mt-8 text-xs text-slate-500">© <span id="y">2025</span> MN Taco Bell 25K • Built for speed & accessibility</div>
     </div>
   </footer>
 
-  <noscript>
-    <div class="max-w-6xl mx-auto px-4 py-4 bg-yellow-100 border-t">
-      JavaScript is disabled. Countdown and some interactions may be unavailable.
-    </div>
-  </noscript>
-
-  <script src="./assets/js/main.js" defer></script>
+  <!-- Updates loader -->
+  <script>
+    (function(){
+      const list = document.getElementById('updates-list');
+      fetch('./updates.json', {cache: 'no-cache'})
+        .then(r => r.ok ? r.json() : Promise.reject(r))
+        .then(items => {
+          if(!Array.isArray(items) || !items.length) return;
+          list.innerHTML = items.map(it => {
+            const d = new Date(it.date);
+            const date = isNaN(d) ? it.date : d.toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'});
+            const title = it.title ? String(it.title) : '';
+            const body = it.body ? String(it.body) : '';
+            return `
+              <li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <div class="text-xs uppercase tracking-wide text-slate-500">${date}</div>
+                <h3 class="mt-1 font-semibold">${title}</h3>
+                <p class="mt-1 text-slate-700">${body}</p>
+              </li>`;
+          }).join('');
+        })
+        .catch(() => {/* keep fallback */});
+    })();
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
