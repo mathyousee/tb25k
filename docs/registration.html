@@ -133,20 +133,6 @@
   <script>
     // year
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // set "Open in new tab" link once you paste your form URL
-    const iframe = document.querySelector('iframe[title="Race Registration Form"]');
-    const a = document.getElementById('open-in-new');
-    if (iframe && a) {
-      try {
-        const u = new URL(iframe.getAttribute('src') || '', location.href);
-        // Strip ?embedded=true for a cleaner standalone view
-        if (u.searchParams.get('embedded') === 'true') {
-          u.searchParams.delete('embedded');
-        }
-        a.href = u.toString();
-      } catch {}
-    }
   </script>
 </body>
 </html>
